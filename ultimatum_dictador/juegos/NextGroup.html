@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% block title %}Siguiente grupo{% endblock %}
+
+{% block content %}
+  <h3>¡Listo! Has terminado esta tanda.</h3>
+  <p>Si quieres iniciar los juegos con un <strong>Grupo 2</strong>,
+     abre la sala y comparte el enlace con 2 participantes nuevos.</p>
+
+  <div class="mb-3">
+    <a class="btn btn-primary" href="/room/{{ room_name }}/" target="_blank">
+      Abrir sala “{{ room_name }}”
+    </a>
+    <a class="btn btn-outline-secondary" href="/Admin/" target="_blank">
+      Ir al panel de Admin
+    </a>
+  </div>
+
+  <p class="text-muted">
+    En la sala, los participantes ingresan y serán emparejados automáticamente.
+    Cuando 2 personas entren, comenzará el juego para el nuevo grupo.
+  </p>
+
+  {{ next_button }}
+{% endblock %}

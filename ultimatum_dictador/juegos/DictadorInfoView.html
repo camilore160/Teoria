@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% block title %}Dictador (con información) — Observación{% endblock %}
+{% block content %}
+  <h4>Información del Jugador 1 (dictador)</h4>
+  <ul>
+    <li>Estrato: {{ p1_estrato }}</li>
+    <li>Edad: {{ p1_edad }}</li>
+    <li>Sexo: {{ p1_sexo }}</li>
+    <li>Universidad: {{ p1_universidad }}</li>
+  </ul>
+  <p>Por favor espera mientras el dictador toma su decisión…</p>
+  {{ next_button }}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "global/Page.html" %}
+{% block title %}Juego del ultimátum — Receptor{% endblock %}
+{% block content %}
+  <p>El proponente ofreció <b>{{ group.offer }}</b> de {{ C.ENDOWMENT }} COP.</p>
+  <p>¿Aceptas la oferta?</p>
+
+  {{ formfields }}  {# 'accepted' (BooleanField) se mostrará como checkbox con tu models.py actual #}
+
+  {{ next_button }}
+{% endblock %}

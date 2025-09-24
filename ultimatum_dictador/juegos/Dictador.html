@@ -1,0 +1,9 @@
+{% extends "global/Page.html" %}
+{% block title %}Juego del dictador{% endblock %}
+{% block content %}
+  <p>Eres el dictador. Tienes {{ C.ENDOWMENT }} COP. ¿Cuánto quieres dar al otro jugador?</p>
+
+  {{ formfields }}  {# 'dictador_oferta' en Player #}
+
+  {{ next_button }}
+{% endblock %}

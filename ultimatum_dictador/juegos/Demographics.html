@@ -1,0 +1,9 @@
+{% extends "global/Page.html" %}
+{% block title %}Datos sociodemográficos{% endblock %}
+{% block content %}
+  {{ formfield 'estrato' }}
+  {{ formfield 'edad' }}
+  {{ formfield 'sexo' }}
+  {{ formfield 'universidad' }}  <!-- ← añade esta si NO usas {{ formfields }} -->
+  {{ next_button }}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% block title %}Bienvenida{% endblock %}
+{% block content %}
+
+<h3>Instrucciones generales</h3>
+<p>
+Participarás en <b>dos juegos económicos</b> en parejas (2 personas por grupo):
+</p>
+
+<ol>
+  <li>
+    <b>Ultimátum:</b> el Jugador 1 recibe {{ C.ENDOWMENT }} fichas y propone cuánto
+    ofrecer al Jugador 2. El Jugador 2 puede <b>aceptar</b> o <b>rechazar</b>.
+    <ul>
+      <li>Si acepta: Jugador 1 obtiene <code>{{ C.ENDOWMENT }} − oferta</code> y Jugador 2 obtiene <code>oferta</code>.</li>
+      <li>Si rechaza: ambos reciben <code>0</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <b>Dictador:</b> (roles independientes del juego anterior) el Jugador 1 decide
+    cuánto entregar al Jugador 2 de los {{ C.ENDOWMENT }}.
+  </li>
+</ol>
+
+<h4>Antes de empezar</h4>
+<p>Te pediremos algunos <b>datos sociodemográficos</b> (estrato, edad, sexo). Se usan solo con fines académicos.</p>
+
+<h4>Reglas</h4>
+<ul>
+  <li>No hay respuestas correctas o incorrectas; decide libremente.</li>
+  <li>Evita recargar/volver atrás en el navegador.</li>
+  <li>Tus decisiones son anónimas frente a otros participantes.</li>
+</ul>
+
+<p>Cuando estés lista/o, haz clic en <b>Comenzar</b>.</p>
+
+{{ next_button }}
+{% endblock %}

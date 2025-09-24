@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+  {% if title_text %}{{ title_text }}{% else %}Por favor espera...{% endif %}
+{% endblock %}
+
+{% block content %}
+  <p>
+    {% if body_text %}
+      {{ body_text }}
+    {% else %}
+      Por favor espera mientras la otra persona toma su decisión…
+    {% endif %}
+  </p>
+{% endblock %}

@@ -1,0 +1,10 @@
+
+
+{% extends "global/Page.html" %}
+{% block title %}Resultados — Ultimátum{% endblock %}
+{% block content %}
+  <p>Oferta: {{ offer }} / {{ endowment }}</p>
+  <p>¿Aceptada?: {{ accepted }}</p>
+  <p>Tu pago: <b>{{ payoff }}</b></p>
+  {{ next_button }}
+{% endblock %}

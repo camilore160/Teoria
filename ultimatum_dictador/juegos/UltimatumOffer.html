@@ -1,0 +1,9 @@
+{% extends "global/Page.html" %}
+{% block title %}Juego del ultimátum — Proponente{% endblock %}
+{% block content %}
+  <p>Tienes {{ C.ENDOWMENT }} COP. ¿Cuánto ofreces al otro jugador?</p>
+
+  {{ formfields }}  {# muestra el campo 'offer' definido en Group #}
+
+  {{ next_button }}
+{% endblock %}
