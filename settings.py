@@ -39,7 +39,8 @@ LANGUAGE_CODE = 'en'
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
-
+POINTS_CUSTOM_NAME = 'COP'
+POINTS_DECIMAL_PLACES = 0
 ROOMS = [
     dict(
         name='econ101',

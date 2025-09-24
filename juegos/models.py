@@ -97,13 +97,13 @@ class Player(BasePlayer):
     )
     sexo = models.StringField(
         label="Sexo",
-        choices=["Hombre", "Mujer", "Otro", "Prefiero no decir"],
+        choices=["Hombre", "Mujer"],
         widget=widgets.RadioSelect
     )
     # NUEVO: universidad
     universidad = models.StringField(
         label="¿Tu universidad es pública o privada?",
-        choices=["Pública", "Privada", "No aplicable", "Prefiero no decir"],
+        choices=["Pública", "Privada"],
         widget=widgets.RadioSelect
     )
 

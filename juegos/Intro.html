@@ -1,15 +1,15 @@
 {% extends "global/Page.html" %}
-{% block title %}Bienvenida{% endblock %}
+{% block title %}Bienvenid@s{% endblock %}
 {% block content %}
 
 <h3>Instrucciones generales</h3>
 <p>
-Participarás en <b>dos juegos económicos</b> en parejas (2 personas por grupo):
+Participarás en <b>dos juegos económicos</b> :
 </p>
 
 <ol>
   <li>
-    <b>Ultimátum:</b> el Jugador 1 recibe {{ C.ENDOWMENT }} fichas y propone cuánto
+    <b>Ultimátum:</b> el Jugador 1 recibe {{ C.ENDOWMENT }}  y propone cuánto
     ofrecer al Jugador 2. El Jugador 2 puede <b>aceptar</b> o <b>rechazar</b>.
     <ul>
       <li>Si acepta: Jugador 1 obtiene <code>{{ C.ENDOWMENT }} − oferta</code> y Jugador 2 obtiene <code>oferta</code>.</li>
@@ -23,7 +23,7 @@ Participarás en <b>dos juegos económicos</b> en parejas (2 personas por grupo)
 </ol>
 
 <h4>Antes de empezar</h4>
-<p>Te pediremos algunos <b>datos sociodemográficos</b> (estrato, edad, sexo). Se usan solo con fines académicos.</p>
+<p>Te pediremos algunos <b>datos sociodemográficos</b> (estrato, edad, sexo,tipo de universidad). Se usan solo con fines académicos.</p>
 
 <h4>Reglas</h4>
 <ul>
@@ -36,3 +36,4 @@ Participarás en <b>dos juegos económicos</b> en parejas (2 personas por grupo)
 
 {{ next_button }}
 {% endblock %}
+
