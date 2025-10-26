@@ -104,6 +104,29 @@ class DictadorResults(Page):
         )
 
 
+# =========================
+# OPINIÓN DE JUSTICIA (DICTADOR estándar)  ⬅️ NUEVA
+# =========================
+class DictadorFairness(Page):
+    form_model = 'player'
+    form_fields = ['dic_fairness_p2']
+
+    @staticmethod
+    def is_displayed(player: Player):
+        # Solo responde el Jugador 2
+        return player.id_in_group == 2
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        g = player.group
+        dictator = g.get_player_by_id(1)
+        return dict(
+            oferta=dictator.dictador_oferta or cu(0),
+            payoff=player.payoff,
+            endowment=C.ENDOWMENT,
+        )
+
+
 # ==========================================================
 # ULTIMÁTUM CON INFORMACIÓN (P2 ve datos de P1)
 # ==========================================================
@@ -219,6 +242,28 @@ class DictadorInfoResults(Page):
 
 
 # =========================
+# OPINIÓN DE JUSTICIA (DICTADOR con información)  ⬅️ NUEVA
+# =========================
+class DictadorInfoFairness(Page):
+    form_model = 'player'
+    form_fields = ['dic_info_fairness_p2']
+
+    @staticmethod
+    def is_displayed(player: Player):
+        return player.id_in_group == 2
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        g = player.group
+        dictator = g.get_player_by_id(1)
+        return dict(
+            oferta=dictator.dictador_oferta_info or cu(0),
+            payoff=player.payoff,
+            endowment=C.ENDOWMENT,
+        )
+
+
+# =========================
 # PANTALLA FINAL
 # =========================
 class Gracias(Page):
@@ -235,14 +280,10 @@ page_sequence = [
     # Ultimátum (estándar)
     UltimatumOffer, WaitForOffer, UltimatumResponse, UltimatumResultsWaitPage, UltimatumResults,
     # Dictador (estándar)
-    Dictador, DictadorResultsWaitPage, DictadorResults,
-
+    Dictador, DictadorResultsWaitPage, DictadorResults, DictadorFairness,   # ⬅️ nueva
     # Nuevos con información revelada
     UltimatumInfoOffer, WaitForOfferInfo, UltimatumInfoResponse, UltimatumInfoResultsWaitPage, UltimatumInfoResults,
-    DictadorInfoDecision, DictadorInfoView, DictadorInfoResultsWaitPage, DictadorInfoResults,
-
+    DictadorInfoDecision, DictadorInfoView, DictadorInfoResultsWaitPage, DictadorInfoResults, DictadorInfoFairness,  # ⬅️ nueva
     Gracias,
 ]
-
-
 

@@ -1,5 +1,5 @@
-from otree.api import *
-from otree.api import widgets  # para usar RadioSelect
+
+
 
 from otree.api import *
 from otree.api import widgets  # para usar RadioSelect
@@ -194,3 +194,16 @@ class Player(BasePlayer):
 
     # Total final (suma de los 4 juegos)
     total_payoff = models.CurrencyField()
+
+    # ===================== NUEVO: opinión de justicia (P2) =====================
+    dic_fairness_p2 = models.StringField(
+        choices=[('justo', 'Justo'), ('injusto', 'Injusto')],
+        label="¿El reparto que recibiste te pareció justo o injusto?",
+        widget=widgets.RadioSelect
+    )
+
+    dic_info_fairness_p2 = models.StringField(
+        choices=[('justo', 'Justo'), ('injusto', 'Injusto')],
+        label="(Con información) ¿El reparto te pareció justo o injusto?",
+        widget=widgets.RadioSelect
+    )
