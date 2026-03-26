@@ -1,7 +1,7 @@
 {% extends "global/Page.html" %}
 
 {% block title %}
-Opinión sobre el reparto (Dictador con información)
+Resultado — Ultimátum con información
 {% endblock %}
 
 {% block content %}
@@ -11,23 +11,23 @@ Dotación total: {{ endowment }}
 </p>
 
 <p>
-El Jugador 1 te asignó: {{ oferta }}
+Oferta realizada: {{ offer }}
 </p>
 
 <p>
 Tu pago en este juego: {{ payoff }}
 </p>
 
+{% if accepted %}
 <p>
-¿El reparto te pareció justo o injusto?
+La oferta fue aceptada.
 </p>
-
-{{ formfields }}
+{% else %}
+<p>
+La oferta fue rechazada.
+</p>
+{% endif %}
 
 {{ next_button }}
 
 {% endblock %}
-
-
-
-

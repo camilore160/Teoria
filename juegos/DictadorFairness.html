@@ -4,7 +4,7 @@
 {% block title %}Opinión sobre el reparto (Dictador){% endblock %}
 
 {% block content %}
-  <p>Dotación: {{ endowment|cu }}</p>
+  <p>Dotación: {{ C.ENDOWMENT|cu }}</p>
   <p>El Jugador 1 te asignó: <strong>{{ oferta|cu }}</strong></p>
 
   <p>Tu pago en este juego: <strong>{{ payoff|cu }}</strong></p>
@@ -13,4 +13,5 @@
   {% formfields %}
   {% next_button %}
 {% endblock %}
+
 
